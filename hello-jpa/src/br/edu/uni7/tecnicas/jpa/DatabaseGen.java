@@ -19,9 +19,6 @@ public class DatabaseGen {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("uni7-pu", config);
 		EntityManager em = factory.createEntityManager();
 		
-		User usuario1 = new User(null, "nome1", "sobrenome1", "password");
-		User usuario2 = new User(null, "nome2", "sobrenome2", "password");
-		User usuario3 = new User(null, "nome3", "sobrenome3", "password");
 		
 //		Book book1 = new Book(null, "livro1" , "description1", "1234", new GregorianCalendar());
 //		Book book2 = new Book(null, "livro2" , "description2", "5678", new GregorianCalendar());

@@ -45,6 +45,22 @@ public class SubscriptionRepository {
 		return s1;
 	}
 	
+	public List<Subscription> findByPaymentLowerThan(Double payment){
+		EntityManager em = factory.createEntityManager();
+		
+		TypedQuery<Subscription> query = em.createQuery(
+				"select s from Subscription s where s.payment < :payment", 
+				Subscription.class);
+		query.setParameter("payment", payment);
+		
+		List<Subscription> result = query.getResultList();
+		
+		em.close();
+		
+		return result;
+	}
+
+	
 	public List<Subscription> findAll(){
 		
 		EntityManager em = factory.createEntityManager();
