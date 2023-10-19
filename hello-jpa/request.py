@@ -1,3 +1,4 @@
+# pip install requests no terminal
 import requests
 
 if __name__ == "__main__":
